@@ -10,13 +10,20 @@ import {HttpClientModule} from "@angular/common/http";
 import { TemplateComponent } from './template/template.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Routes, RouterModule} from "@angular/router";
+import { FooterComponent } from './footer/footer.component';
 
+import { MainOfferComponent } from './main-offer/main-offer.component';
+import { HeadComponent } from './head/head.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TemplateComponent
+    TemplateComponent,
+    FooterComponent,
+
+    MainOfferComponent,
+    HeadComponent
 
   ],
   imports: [

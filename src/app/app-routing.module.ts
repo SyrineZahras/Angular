@@ -5,13 +5,13 @@ import {AppProductRoutingModule} from "./app-product/app-product-routing.module"
 import { LoginComponent } from './app-user/login/login.component';
 import { ProductComponent } from './app-product/product/product.component';
 import { MainProductComponent } from './app-product/main-product/main-product.component';
+import { MainOfferComponent } from './main-offer/main-offer.component';
 
 const routes: Routes = [
 
   {path: 'contact',component: LoginComponent },
   {path: 'tshirt',component: MainProductComponent },
-
-
+  {path: '', component: MainOfferComponent },
 ];
 
 @NgModule({
