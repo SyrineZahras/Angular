@@ -5,20 +5,47 @@ import { AppComponent } from './app.component';
 import {AppUserModule} from "./app-user/app-user.module";
 import {AppProductModule} from "./app-product/app-product.module";
 import {AppSharedModule} from "./app-shared/app-shared.module";
-import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { TemplateComponent } from './template/template.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { Routes, RouterModule} from "@angular/router";
+import { Routes } from "@angular/router";
+import { TeamComponent } from './team/team.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeadComponent } from './head/head.component';
+import { AccueilComponent } from './accueil/accueil.component';
+import {MatCardModule} from '@angular/material/card';
+import { FormulaireComponent } from './formulaire/formulaire.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UserService } from './shared/user.service';
+
+import { ToastrModule } from 'ngx-toastr';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { SharedComponent } from './shared/shared.component';
+
+
+
+
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TemplateComponent
+    TemplateComponent,
+    TeamComponent,
+    FooterComponent,
+    HeadComponent,
+    AccueilComponent,
+    FormulaireComponent,
+    SignUpComponent,
+    SharedComponent,
+    
 
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -28,8 +55,20 @@ import { Routes, RouterModule} from "@angular/router";
     FormsModule,
     HttpClientModule,
     NgbModule,
+    MatCardModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule,
+    CommonModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(), // ToastrModule added
+
+
+    
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+

@@ -1,4 +1,4 @@
-<h1>LogIn ^_^</h1>
+<h1>LOGIN</h1>
 <div class="alert alert-danger" *ngIf="msg!=null">
   {{msg}}
 </div>
@@ -22,4 +22,7 @@
   <button type="submit" class="btn btn-outline-primary" [hidden]="myForm.invalid">Login</button>
   &nbsp;
   <button type="reset" class="btn btn-outline-warning">reset</button>
+  <br>
+  <a style="color: blue; margin-right: 100px;" routerLink="/signup">New User? Click to signup! </a>
+
 </form>
